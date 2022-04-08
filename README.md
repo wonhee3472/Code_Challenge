@@ -29,3 +29,10 @@ And here is how I defined the `Form Object`:
 ![](Resources/formObject.png)
 
 Wolfram Language has quite a few symbols that can replace words and I learned that `Association` can be replaced by `<||>`. Not sure how it works but I feel like it's similar to `Arrow Function` in JavaScript to make code look a little more concise. Also, here I used `delayed evaluation (:=)` which I learned that this tells the program that the values for the form will be entered by the user later. Also, because of it this line of code will not have an output.
+
+And notice that each object has its own association and it contains a few options inside:
+
+- `Interpreter`: For the object to use a control function like `RadioButtonBar` and understand the input, `Interpreter` was used to create 4 unique choices and each choice was interpreted accordingly.
+- `RadioButtonBar`: As mentioned above, the multiple choice question format was created by using `RadioButtonBar`.
+- `Label`: `Label` was used as a question attached to each object to ask the user to choose one option among the choices.
+- I could've used `AppearanceRules` and `FormLayoutFunction` to give the form a title and description but for now I'm just going to let the form display in its default format.
