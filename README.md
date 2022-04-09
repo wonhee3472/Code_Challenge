@@ -41,7 +41,7 @@ And notice that each object has its own association and it contains a few option
 
 ![](Resources/CreateDataBin.png)
 
-Here, a databin was created by using the `CreateDatabin[]` function and it is stored in the Wofram Data Drop. In Data Drop, all the data the users input will be stored.
+Here, a databin was created by using the `CreateDatabin[]` function and it is stored in the Wofram Data Drop. In Data Drop, all the data the users enter will be stored.
 
 - `Name`: The name of the `Databin` is **WL Exercise**
 - `Permissions`: This is set to public so anyone with the ID of this databin can access the data inside it.
@@ -49,4 +49,14 @@ Here, a databin was created by using the `CreateDatabin[]` function and it is st
 
 ## Third Step: FormFunction[]
 
-For the user to be able to
+For the form to receive the values from the users, `FormFunciton[]` is used here. Inside the function:
+
+- The first argument, `fo`, is the `Form Object` which was defined in the first step.
+- The second argument, `DatabinAdd[]` defines the data that will be added to `WL Exercise` which defined in the second step.
+- Each variable defined in `Form Object` is associated with `#variable_name` and it tells the program that the code is referring to the same variable in the program.
+- The entire function is defined into `formFunc` with delayed evaluation like how `fo` was defined.
+
+## Fourth Step: CloudDeploy[]
+
+![](Resources/CloudDeploy.png)
+`CloudDeploy` was used to deploy the program to the cloud. The `Permissions` was set to `"Public"` so anyone can access this web form with the url.
