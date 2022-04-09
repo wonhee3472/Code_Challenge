@@ -35,4 +35,18 @@ And notice that each object has its own association and it contains a few option
 - `Interpreter`: For the object to use a control function like `RadioButtonBar` and understand the input, `Interpreter` was used to create 4 unique choices and each choice was interpreted accordingly.
 - `RadioButtonBar`: As mentioned above, the multiple choice question format was created by using `RadioButtonBar`.
 - `Label`: `Label` was used as a question attached to each object to ask the user to choose one option among the choices.
-- I could've used `AppearanceRules` and `FormLayoutFunction` to give the form a title and description but for now I'm just going to let the form display in its default format.
+- `AppearanceRules`: This part gives the form a title, description, and a label for the submit button.
+
+## Second Step: Databin to store data
+
+![](Resources/CreateDataBin.png)
+
+Here, a databin was created by using the `CreateDatabin[]` function and it is stored in the Wofram Data Drop. In Data Drop, all the data the users input will be stored.
+
+- `Name`: The name of the `Databin` is **WL Exercise**
+- `Permissions`: This is set to public so anyone with the ID of this databin can access the data inside it.
+- The list of data with its data types is defined here as well.
+
+## Third Step: FormFunction[]
+
+For the user to be able to
