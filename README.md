@@ -60,3 +60,11 @@ For the form to receive the values from the users, `FormFunciton[]` is used here
 
 ![](Resources/CloudDeploy.png)
 `CloudDeploy` was used to deploy the program to the cloud. The `Permissions` was set to `"Public"` so anyone can access this web form with the url.
+
+## Results
+
+- Web Form:
+  ![](Resources/WebForm.png)
+
+- Databin in DataDrop:
+  ![](Resources/DataDrop.png)
