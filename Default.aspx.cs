@@ -16,8 +16,23 @@ public partial class _Default : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
+        string g;
+        if (RadioMale.Checked == true)
+        {
+            g = "male";
+        }
+        else
+            g = "female";
+
+        string city;
+        if (RadioLA.Checked == true) { city = "LA"; }
+        else if (RadioNY.Checked == true) { city = "NY"; }
+        else if (RadioSF.Checked == true) { city = "SF"; }
+        else city = "Champaign";
+
         c.Open();
-        SqlCommand cmd = new SqlCommand("insert into userInfo values('" + txtWolframID.Text + "','" + txtPassword.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtMobile.Text + "','" + txtEmail.Text + "')", c);
+        string q = "insert into userInfo (WolframID, Password, Name, Address, Mobile, Email, Gender, City) values ('" + txtWolframID.Text + "','" + txtPassword.Text + "','" + txtName.Text + "','" + txtAddress.Text + "','" + txtMobile.Text + "','" + txtEmail.Text + "','" + g + "','" + city + "')";
+        SqlCommand cmd = new SqlCommand(q, c);
         cmd.ExecuteNonQuery();
         lblMessage.Text = "Record submitted successfully";
         c.Close();

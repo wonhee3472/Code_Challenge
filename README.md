@@ -68,3 +68,10 @@ For the form to receive the values from the users, `FormFunciton[]` is used here
 
 - Databin in DataDrop:
   ![](Resources/DataDrop.png)
+
+## Next Steps
+
+So the next problem I need to solve is this: `Deploy a form on the web that takes a $WolframID as input and returns a Dataset of that user data from the Databin above`. I looked into the documentation center, Wolfram Community, StackExchange, and other resources to find out how to perform this task using WL but I wasn't able to do so. I think a developer encounters this sort of situation quite often and this is when he/she has to decide what the next step(s) is going to look like.
+
+For me, I decided to choose a different technology that I could find a resource for this situation and I found that there is a way to create a web form that submits data into MS SQL Server and then fetches/displays it in grid-view using **ASP.NET, C#, and MS SQL Server Management Studio**. It took awhile to learn how to set up/connect to a server and write a C# code to manipulate the html file to submit the entered data to my database but I was able to finish writing up everything (Find the codes in [Default.aspx](https://github.com/wonhee3472/Code_Challenge/blob/main/Default.aspx) and [Default.aspx.cs](https://github.com/wonhee3472/Code_Challenge/blob/main/Default.aspx.cs)). so now I have a web form working and it looks like this in the front-end:
+![](Resources/aspx_webform.png)
