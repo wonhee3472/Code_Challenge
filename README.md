@@ -80,7 +80,7 @@ For me, I decided to choose a different technology that I could find a resource 
 And I entered 5 different data myself using the form and now we can see that the database has those 5 different entries:
 ![](Resources/database_input.png)
 
-Now that the database has been established with the data, I have to create another web form to `take a WolframID as input` and `return a dataset of that user data` from the database. This was also done with **ASP.NET, C#, and MS SQL Server** and the code for this taks can be found in [Search.aspx](https://github.com/wonhee3472/Code_Challenge/blob/main/Search.aspx) and [Search.aspx.cs](https://github.com/wonhee3472/Code_Challenge/blob/main/Search.aspx.cs).
+Now that the database has been established with the data, I have to create another web form to `take a WolframID as input` and `return a dataset of that user data` from the database. This was also done with **ASP.NET, C#, and MS SQL Server** and the code for this task can be found in [Search.aspx](https://github.com/wonhee3472/Code_Challenge/blob/main/Search.aspx) and [Search.aspx.cs](https://github.com/wonhee3472/Code_Challenge/blob/main/Search.aspx.cs).
 
 - This is the result I get if I enter the existing `Wolfram ID`:
   ![](Resources/user_dataset.png)
