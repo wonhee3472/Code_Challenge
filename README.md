@@ -53,7 +53,7 @@ Here, a databin was created by using the `CreateDatabin[]` function and it is st
 For the form to receive the values from the users, `FormFunciton[]` is used here. Inside the function:
 
 - The first argument, `fo`, is the `Form Object` which was defined in the first step.
-- The second argument, `DatabinAdd[]` defines the data that will be added to `WL Exercise` which defined in the second step.
+- The second argument, `DatabinAdd[]` defines the data that will be added to `WL Exercise` which was defined in the second step.
 - Each variable defined in `Form Object` is associated with `#variable_name` and it tells the program that the code is referring to the same variable in the program.
 - The entire function is defined into `formFunc` with delayed evaluation like how `fo` was defined.
 
@@ -74,5 +74,16 @@ For the form to receive the values from the users, `FormFunciton[]` is used here
 
 So the next problem I need to solve is this: `Deploy a form on the web that takes a $WolframID as input and returns a Dataset of that user data from the Databin above`. I looked into the documentation center, Wolfram Community, StackExchange, and other resources to find out how to perform this task using WL but I wasn't able to do so. I think a developer encounters this sort of situation quite often and this is when he/she has to decide what the next step(s) is going to look like.
 
-For me, I decided to choose a different technology that I could find a resource for this situation and I found that there is a way to create a web form that submits data into MS SQL Server and then fetches/displays it in grid-view using **ASP.NET, C#, and MS SQL Server Management Studio**. It took awhile to learn how to set up/connect to a server and write a C# code to manipulate the html file to submit the entered data to my database but I was able to finish writing up everything (Find the codes in [Default.aspx](https://github.com/wonhee3472/Code_Challenge/blob/main/Default.aspx) and [Default.aspx.cs](https://github.com/wonhee3472/Code_Challenge/blob/main/Default.aspx.cs)). so now I have a web form working and it looks like this in the front-end:
+For me, I decided to choose a different technology that I could find a resource for this situation and I found that there is a way to create a web form that submits data into MS SQL Server and then fetches/displays it in grid-view using **ASP.NET, C#, and MS SQL Server Management Studio**. It took awhile to learn how to set up/connect to a server and write a C# code to manipulate the html file to submit the entered data to my database but I was able to finish writing up everything (Find the codes in [Default.aspx](https://github.com/wonhee3472/Code_Challenge/blob/main/Default.aspx) and [Default.aspx.cs](https://github.com/wonhee3472/Code_Challenge/blob/main/Default.aspx.cs)). Now I have a web form working and it looks like this in the front-end:
 ![](Resources/aspx_webform.png)
+
+And I entered 5 different data myself using the form and now we can see that the database has those 5 different entries:
+![](Resources/database_input.png)
+
+Now that the database has been established with the data, I have to create another web form to `take a WolframID as input` and `return a dataset of that user data` from the database. This was also done with **ASP.NET, C#, and MS SQL Server** and the code for this taks can be found in [Search.aspx](https://github.com/wonhee3472/Code_Challenge/blob/main/Search.aspx) and [Search.aspx.cs](https://github.com/wonhee3472/Code_Challenge/blob/main/Search.aspx.cs).
+
+- This is the result I get if I enter the existing `Wolfram ID`:
+  ![](Resources/user_dataset.png)
+
+- In contrast, I get an error message that says **Record Not Found** if I enter an invalid user data:
+  ![](Resources/user_dataset_none.png)
