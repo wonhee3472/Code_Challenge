@@ -14,7 +14,7 @@ I was given a set of 4 problems to solve for a junior developer position at Wolf
 
 My first impression when I saw this statement was.. `"Man I had no idea I can do web development using Wolfram Language!"` And the next thought that came to my mind was.. `"I'm not sure if I can finish this.."` Feeling devastated, I started by looking up Wolfram Language (WL from here on) [documentation]("https://reference.wolfram.com/language/") to find out how to use the features they said I should use.
 
-Aside the fact that I don't know how to use the features in the instructions, I knew right away that I'm about to make some sort of a form to collect/save data in a database, and another form to query the database and return a visualization of the queried result. So I get the gist of the prompt but the problem as you may already know is.. **How do I learn a new language and create something like it in a span of one week?!??**
+Aside from the fact that I don't know how to use the features in the instructions, I knew right away that I'm about to make some sort of a form to collect/save data in a database, and another form to query the database and return a visualization of the queried result. So I get the gist of the prompt but the problem as you may already know is.. **How do I learn a new language and create something like it in a span of one week?!??**
 
 However, I'm going to keep in mind what I've learned over the past several months while I was studying to become a developer. A good developer is not someone who knows every minute detail about the language, but is someone who knows where to look for help and resources. So here I go!
 
@@ -49,6 +49,7 @@ Here, a databin was created by using the `CreateDatabin[]` function and it is st
 
 ## Third Step: FormFunction[]
 
+![](Resources/formFunction.png)
 For the form to receive the values from the users, `FormFunciton[]` is used here. Inside the function:
 
 - The first argument, `fo`, is the `Form Object` which was defined in the first step.
