@@ -90,3 +90,22 @@ Now that the database has been established with the data, I have to create anoth
 ## Last Problem
 
 The prompt for the last problem is this: `Deploy a form on the web that takes a question number as input and returns a BarChart of all the answers to that question from the database.`
+
+I understood this as more like a prompt that asks for an interactive dashboard. That is, a user would either type in or choose a question number to see a visualized response (in this case, a bar chart) to the selected question. Since I haven't figured out how to do this using WL, I decided to create a simple dynamic Plotly Chart using **HTML and JavaScript**.
+
+First, I set up a [index.html](https://github.com/wonhee3472/Code_Challenge/blob/main/index.html) page with the appropriate links to the `plotly` library and a JavaScript file `index.js`. The page contains a dropdown menu with a `id` of `dropdownMenu`:
+![](Resources/index_html.png)
+
+I hard coded the [index.js](https://github.com/wonhee3472/Code_Challenge/blob/main/index.js) file with the data I'd like to visualize on the web page and this is something I wish I avoided. Instead, I wanted to export the data from the database in a `json` format and use `d3.json` to load and retrieve the data file. Then I would have been able to create a function that builds a chart according to the option chosen in the dropdown menu. Unfortunately, I wasn't able to figure out how to programmatically collect the number of `city` and `gender` selected in each response so I put the data in `index.js` by hand. This was only possible since the dataset was made up of only 5 entries but it would not be possible if I had to deal with a much larger dataset. However, since I would like to demonstrate my ability to create a responsive page, I went ahead and included the data in the file:
+![](Resources/index_js.png)
+
+The result of this code put together is as below:
+![](Resources/gender_barchart.png)
+
+![](Resources/favorite_city_barchart.png)
+
+## Reflection
+
+This challenge was really fund actually in that I got to tinker with a few technologies I never learned. I don't think I can say to myself confidently that I've become an expert at the languages I've learned over the past few days but I can definitely say I learned something pretty cool and I want to keep learning technologies like these!
+
+Also, I realized how powerful and efficient WL is. For the third challenge, I had to set up a server/database with MS SQL server management studio, code in C# to make a form on the web, and write a SQL query to insert the result to the database. However, I would've completed all these tasks only with WL if I figured out how to do them. Also, the form would've been readily available for anyone with the cloud technology embedded in WL unlike the form I created with the other techs. I hope to be given a chance to learn how to program in WL so I could do tasks more efficiently and effectively.

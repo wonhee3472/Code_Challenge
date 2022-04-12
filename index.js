@@ -1,7 +1,7 @@
 function init() {
     data = [{
-        x: [1, 2, 3, 4, 5],
-        y: [1, 2, 4, 8, 16],
+        x: ["Male", "Female"],
+        y: [4, 1],
         type: 'bar' 
       }];
       Plotly.newPlot('plot', data);
