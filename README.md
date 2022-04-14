@@ -24,25 +24,25 @@ At that moment, I decided to remember what I've learned over the past several mo
 
 I scraped pieces of information from the WL documentation center and other resources such `Wolfram StackExchange` and `Wolfram Community` and here's what I've learned so far:
 
-- The web form in WL is made up of **Form Objects** and it constitutes each row of the form
-- They layout of the form is defined by the **FormLayoutFunction[]** (e.g., title, description, and etc.)
+- The web form in WL is made up of [Form Objects](https://reference.wolfram.com/language/ref/FormObject.html) and it constitutes each row of the form
+- They layout of the form is defined by the [FormLayoutFunction[]](https://reference.wolfram.com/language/ref/FormLayoutFunction.html) (e.g., title, description, and etc.)
 
 And here is how I defined the `Form Object`:
 ![](Resources/formObject.png)
 
-Wolfram Language has quite a few symbols that can replace words and I learned that `Association` can be replaced by `<||>`. Not sure how it works but I feel like it's similar to `Arrow Function` in JavaScript to make codes look more concise. Also, here I used `delayed evaluation (:=)` which I learned that this tells the program that the values for the form will be entered by the user later. Also, because of it this line of code will not have an output.
+Wolfram Language has quite a few symbols that can replace words and I learned that [Association](https://reference.wolfram.com/language/ref/Association.html) can be replaced by `<||>`. I feel like it's a similar concept to `Arrow Function` in JavaScript which makes codes look more concise. Also, here I used `delayed evaluation (:=)` or [RuleDelayed](https://reference.wolfram.com/language/ref/RuleDelayed.html) to be exact. I learned that this tells the program that the values for the form will be entered by the user later. Also, because of it this line of code will not have an output.
 
 - Each object has its own association and it contains a few options inside:
-  - `Interpreter`: For the object to use a control function like `RadioButtonBar` and understand the input, `Interpreter` was used to create 4 unique choices and each choice was interpreted accordingly.
-  - `RadioButtonBar`: As mentioned above, the multiple choice question format was created by using `RadioButtonBar`.
+  - [Interpreter](https://reference.wolfram.com/language/ref/Interpreter.html): For the object to use a control function like `RadioButtonBar` and understand the input, `Interpreter` was used to create 4 unique choices and each choice was interpreted accordingly.
+  - `[adioButtonBar](https://reference.wolfram.com/language/ref/RadioButtonBar.html): As mentioned above, the multiple choice question format was created by using `RadioButtonBar`.
   - `Label`: `Label` was used as a question attached to each object to ask the user to choose one option among the choices.
-  - `AppearanceRules`: This part gives the form a title, description, and a label for the submit button.
+  - [AppearanceRules](https://reference.wolfram.com/language/ref/AppearanceRules.html): This part gives the form a title, description, and a label for the submit button.
 
 ## Databin to store data
 
 ![](Resources/CreateDataBin.png)
 
-Here, a databin was created by using the `CreateDatabin[]` function and it is stored in the Wofram Data Drop. In Data Drop, all the data the users enter will be stored.
+Here, a databin was created by using the [CreateDatabin[]](https://reference.wolfram.com/language/ref/CreateDatabin.html) function and it is stored in the Wofram Data Drop. In Data Drop, all the data the users enter will be stored.
 
 - `Name`: The name of the `Databin` is **WL Exercise**
 - `Permissions`: This is set to public so anyone with the ID of this databin can access the data inside it.
@@ -51,17 +51,17 @@ Here, a databin was created by using the `CreateDatabin[]` function and it is st
 ## FormFunction[]
 
 ![](Resources/formFunction.png)
-For the form to receive the values from the users, `FormFunciton[]` is used here. Inside the function:
+For the form to receive the values from the users, [FormFunciton[]](https://reference.wolfram.com/language/ref/FormFunction.html) was used here. Inside the function:
 
 - The first argument, `fo`, is the `Form Object` which was defined in the first step.
-- The second argument, `DatabinAdd[]` defines the data that will be added to `WL Exercise` which was defined in the second step.
+- The second argument, [DatabinAdd[]](https://reference.wolfram.com/language/ref/DatabinAdd.html) defines the data that will be added to `WL Exercise` which was defined in the second step.
 - Each variable defined in `Form Object` is associated with `#variable_name` and it tells the program that the code is referring to the same variable in the program.
 - The entire function is defined into `formFunc` with delayed evaluation like how `fo` was defined.
 
 ## CloudDeploy[]
 
 ![](Resources/CloudDeploy.png)
-`CloudDeploy` was used to deploy the program to the cloud. The `Permissions` was set to `"Public"` so anyone can access this web form with the url.
+[CloudDeploy](https://reference.wolfram.com/language/ref/CloudDeploy.html) was used to deploy the program to the cloud. The `Permissions` was set to `"Public"` so anyone can access this web form with the url.
 
 ## Results
 
