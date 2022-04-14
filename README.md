@@ -12,11 +12,13 @@ I was given a set of 4 problems to solve for a junior developer position at Wolf
 
 > Deploy a form on the web that takes a question number (Integer) as input and returns a BarChart of all the answers to that question from the Databin\* used above.
 
-My first impression when I saw this statement was.. `"Man I had no idea I can do web development using Wolfram Language!"` And the next thought that came to my mind was.. `"I'm not sure if I can do this.."` Feeling devastated, I started by looking up Wolfram Language (WL from here on) [documentation]("https://reference.wolfram.com/language/") to find out how to use the features mentioned in the instructions.
+My first impression when I saw these prompts was.. `"Man I had no idea I can do web development using Wolfram Language!"` And the next thought that came to my mind was.. `"I'm not sure if I can do this.."` Feeling devastated, I started by looking up Wolfram Language (WL from here on) [documentation]("https://reference.wolfram.com/language/") to find out how to use the features mentioned in the instructions.
 
 Aside from the fact that I'm not really familiar with the features, I knew that I need to make some sort of a form to collect/save data in a database, and another form to query the database and return a visualization of the queried result. So I get the gist of the prompt but the problem as you may already know is.. **How do I do it?**
 
-I'm going to keep in mind what I've learned over the past several months while I was studying to become a developer. A good developer is not someone who knows every minute detail about the syntax, but is someone who knows where to look for help and resources. So here I go!
+At that moment, I decided to remember what I've learned over the past several months while I was studying to become a developer and then move forward:
+
+`A good developer is not someone who knows every minute detail about the language syntax and knows how to code everything from scratch, but is someone who knows where to look for help and resources.`
 
 ## Form Object
 
